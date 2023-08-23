@@ -44,48 +44,56 @@
     <title>Cadastro de Séries, Turmas e Disciplinas</title>
 </head>
 <body>
-<form action="cad_seriesTurmas.php" method="post">
-    <h2>Cadastro de Série</h2>
-  <div class="form-group">
-    <label for="serie">Série:</label>
-    <input type="text" class="form-control" id="serie" name="serie" required>
-  </div>
-  <div class="form-group">
-    <h2>Cadastro de Turma</h2>
-    <label for="turma">Turma:</label>
-    <input type="text" name="turma" id="turma" required>
-    <br>
-    <label for="serie_turma" name="serie_turma" >Série:</label>
-    <select class="form-control" id="serie_turma" name="serie_turma" required>
-      <?php while($linha = mysqli_fetch_assoc($consulta_series)){?>
-      <option value="<?php echo $linha["serieID"]?>"><?php echo $linha["serie"]?></option>
-      <?php }?>
-      
-      
-      <!-- Adicione as opções para outras séries -->
-    </select>
-  </div>
-  <div class="form-group">
-    <h2>Cadastro de Disciplina</h2>
-    <label for="disciplina">Disciplina:</label>
-    <input type="text" id="disciplina" name="disciplina" required>
-    <br>
-    <label for="professor">Professor:</label>
-        <input type="text" id="professor" name="professor" required>
-        <br>
-        <label for="turma_disciplina">Turma:</label>
-        <select id="turma_disciplina" name="turma_disciplina" required>
-            <option value="1">1ª Série - Turma A</option>
-            <option value="2">1ª Série - Turma B</option>
-            <!-- Adicione as opções para outras turmas -->
-        </select>
-        <br>
-
-        <input type="submit" value="Cadastrar">
-    
-  </div>
+<div class="container d-flex justify-content-center mt-5">
+  <form action="cad_seriesTurmas.php" method="post">
+      <div class="text-center">
+        <h2>Cadastro de Série</h2>
+      </div>
+    <div class="form-group">
+      <label for="serie">Série:</label>
+      <input type="text" class="form-control" id="serie" name="serie" required>
+    </div>
+    <div class="form-group">
+        <div class="text-center">
+          <h2>Cadastro de Turma</h2>
+      </div>
+      <label for="turma">Turma:</label>
+      <input type="text" name="turma" id="turma" required>
+      <br>
+      <label for="serie_turma" name="serie_turma" >Série:</label>
+      <select class="form-control" id="serie_turma" name="serie_turma" required>
+        <?php while($linha = mysqli_fetch_assoc($consulta_series)){?>
+        <option value="<?php echo $linha["serieID"]?>"><?php echo $linha["serie"]?></option>
+        <?php }?>
   
-  </div>
-</form>
+  
+  
+      </select>
+    </div>
+    <div class="form-group">
+        <div class="text-center">
+            <h2>Cadastro de Disciplina</h2>
+      </div>
+      <label for="disciplina">Disciplina:</label>
+      <input type="text" id="disciplina" name="disciplina" required>
+      <br>
+      <label for="professor">Professor:</label>
+          <input type="text" id="professor" name="professor" required>
+          <br>
+          <label for="turma_disciplina">Turma:</label>
+          <select id="turma_disciplina" name="turma_disciplina" required>
+              <option value="1">1ª Série - Turma A</option>
+              <option value="2">1ª Série - Turma B</option>
+              <!-- Adicione as opções para outras turmas -->
+          </select>
+          <br>
+  
+          <input type="submit" value="Cadastrar">
+  
+    </div>
+  
+    </div>
+  </form>
+</div>
 </body>
 </html>

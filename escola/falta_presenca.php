@@ -15,7 +15,9 @@
     <title>Diário de Classes</title>
 </head>
 <body>
-    <h1>Diario de Classes</h1>
+    <div class="d-flex justify-content-center">
+        <h1>Diario de Classes</h1>
+    </div>
     <form action="">
         <table class="table table-sm">
         <thead>

@@ -23,7 +23,9 @@
 </head>
 <body>
     <mian>
-    <p class="h1">Lista de Professores</p>
+    <div  class="d-flex justify-content-center">
+      <h1>Lista de Professores</h1>
+    </div>
     <table class="table table-dark">
   <thead>
     <tr>

@@ -16,15 +16,17 @@
 </head>
 <body>
 <div class="form-group">
-        <form action="historico_escolar.php" method="post">
-            <label for="aluno">Aluno:</label>
-            <select class="form-control" id="aluno" name="aluno">
-               <?php while($linha = mysqli_fetch_assoc($consulta_conexao)){ ?> 
-              <option value="<?php echo $linha["alunoID"]?>"><?php echo $linha["nomecompleto"]?></option>
-              <?php }?>
-            </select>
-            <br>
-            <button type="submit" name="gerarHistorico">Gerar Histórico</button>
-        </form>
+        <div class="container d-flex justify-content-center mt-5">
+            <form action="historico_escolar.php" method="post">
+                <label for="aluno">Aluno:</label>
+                <select class="form-control" id="aluno" name="aluno">
+                   <?php while($linha = mysqli_fetch_assoc($consulta_conexao)){ ?>
+                  <option value="<?php echo $linha["alunoID"]?>"><?php echo $linha["nomecompleto"]?></option>
+                  <?php }?>
+                </select>
+                <br>
+                <button type="submit" name="gerarHistorico">Gerar Histórico</button>
+            </form>
+        </div>
 </body>
 </html>

@@ -16,7 +16,9 @@
 </head>
 <body>
 <form action="">
-    <h1>Lançamento de Notas</h1>
+    <div  class="d-flex justify-content-center">
+      <h1>Lançamento de Notas</h1>
+    </div>
     <table class="table table-sm">
       <thead>
         <tr>

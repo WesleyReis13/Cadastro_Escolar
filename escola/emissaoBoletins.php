@@ -17,24 +17,27 @@
     <title>Emissão de Boletins</title>
 </head>
 <body>
-<form action="emissaoBoletins.php" method="post">
-    <div class="form-group">
-        <label for="aluno">Aluno:</label>
-        <select class="form-control" id="aluno" name="aluno">
-          <?php while($linha = mysqli_fetch_assoc($consulta_conexao)){ ?>
-            <option value="<?php echo $linha["alunoID"]?>"><?php echo $linha["nomecompleto"]?></option>
-         <?php }?>
-           
-        </select>
-        <br>
-    <div class="form-group">
-        <label for="serie">Série:</label>
-        <select class="form-control" id="serie" name="serie">
-            <?php while($linha2 = mysqli_fetch_assoc($conexao)){ ?>
-          <option value="<?php echo $linha2["serieID"]?>"><?php echo $linha2["serie"]?></option>
-          <?php }?>
-        </select>
-        <button type="submit" name="gerarBoletim">Gerar Boletim</button>
-</form>
+<div class="container d-flex justify-content-center mt-5">
+    <form action="emissaoBoletins.php" method="post">
+        <div class="form-group">
+            <label for="aluno">Aluno:</label>
+            <select class="form-control" id="aluno" name="aluno">
+              <?php while($linha = mysqli_fetch_assoc($consulta_conexao)){ ?>
+                <option value="<?php echo $linha["alunoID"]?>"><?php echo $linha["nomecompleto"]?></option>
+             <?php }?>
+    
+            </select>
+            <br>
+        <div class="form-group">
+            <label for="serie">Série:</label>
+            <select class="form-control" id="serie" name="serie">
+                <?php while($linha2 = mysqli_fetch_assoc($conexao)){ ?>
+              <option value="<?php echo $linha2["serieID"]?>"><?php echo $linha2["serie"]?></option>
+              <?php }?>
+            </select>
+            <br>
+            <button type="submit" name="gerarBoletim">Gerar Boletim</button>
+    </form>
+</div>
 </body>
 </html>
